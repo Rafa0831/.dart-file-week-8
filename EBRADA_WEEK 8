@@ -1,0 +1,23 @@
+String describeTemp(int celsius) {
+  if (celsius < 15) {
+    return 'cold';
+  } else if (celsius < 28) {
+    return 'comfortable';
+  } else {
+    return 'hot';
+  }
+}
+
+void main() {
+ 
+  for (var i = 1; i <= 3; i++) {
+    print('Reading $i: ${describeTemp(i * 10)}');
+  }
+
+  try {
+    int value = int.parse('abc');
+    print(describeTemp(value));
+  } catch (e) {
+    print('Invalid input, please enter a number.');
+  }
+}
